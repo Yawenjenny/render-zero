@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Render Zero</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0c0f; color: #cfd6dd;
+    font-family: Consolas, "Courier New", monospace; }
+  canvas { display: block; width: 100vw !important; height: 100vh !important; }
+  #overlay { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 16px; background: rgba(8, 9, 12, 0.8); text-align: center;
+    cursor: pointer; z-index: 5; padding: 16px; }
+  #overlay h1 { margin: 0; font-size: 44px; letter-spacing: 12px; font-weight: 400; }
+  #overlay p { margin: 0; max-width: 520px; line-height: 1.6; color: #8f9aa5; font-size: 14px; }
+  #overlay .go { margin-top: 8px; padding: 10px 22px; border: 1px solid #cfd6dd; color: #fff; letter-spacing: 3px;
+    min-width: 300px; box-sizing: border-box; white-space: pre; }
+  #bar { width: 300px; height: 4px; margin-top: -8px; background: rgba(255, 255, 255, 0.14); }
+  #fill { width: 0; height: 100%; background: #ffd27a; box-shadow: 0 0 10px #ffb84a; transition: width 0.15s linear; }
+  #cross { position: fixed; left: 50%; top: 50%; width: 8px; height: 8px; margin: -5px 0 0 -5px;
+    border: 1px solid rgba(255,255,255,.7); border-radius: 50%; pointer-events: none; z-index: 3; }
+  #cross.hot { width: 16px; height: 16px; margin: -9px 0 0 -9px; border-color: #7fe7ff; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "./lib180/three.module.js", "three/addons/": "./lib180/addons/", "@sparkjsdev/spark": "./lib180/spark.module.js" } }
+</script>
+</head>
+<body>
+<div id="overlay">
+  <h1>RENDER ZERO</h1>
+  <p>Three unfinished creations are waiting to be deleted.<br>Each is missing something. Find the piece that completes it.</p>
+  <div class="go">LOADING...</div>
+  <div id="bar"><div id="fill"></div></div>
+  <p>WASD + mouse &nbsp;·&nbsp; click a piece to pick it up &nbsp;·&nbsp; click the creation it belongs to &nbsp;·&nbsp; Q lets go</p>
+</div>
+<div id="cross"></div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
