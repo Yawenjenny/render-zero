@@ -4,7 +4,7 @@
 
 Render Zero is a WebXR experience set in the holding space where failed and abandoned 3D generations wait to be permanently deleted. You cannot repair them. Instead you give each one a discarded piece it was never made for: a folding fan becomes a phoenix's wing, a door becomes a guardian's arm, a leaf becomes a temple's roof. Every creation you save before its countdown ends turns the grey archive, piece by piece, back into a living world.
 
-**Play in the browser:** _link added after the first deployment_
+**Play in the browser:** https://render-zero.vercel.app (desktop browser, keyboard and mouse; about 57 MB loads on the first visit)
 
 Built for Tripothon S1. Every model was generated with [Tripo](https://www.tripo3d.ai); both worlds were generated with [World Labs Marble](https://www.worldlabs.ai) and the living world is a walkable Gaussian splat. The game is plain [three.js](https://threejs.org) with the [Spark](https://sparkjs.dev) splat renderer: no build step.
 
